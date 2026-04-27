@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Neon Ai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2 class="logo">NEON<span>AI</span></h2>
+            <button class="new-chat-btn" onclick="location.reload()">+ NEW MISSION</button>
+            
+            <div id="chatHistory" class="history-list">
+                <div class="history-item">System Boot...</div>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="account-btn" onclick="toggleModal()">CREATE FREE ACCOUNT</button>
+                <p class="credits">Made by <span>Zeeshan Taluckder</span></p>
+            </div>
+        </aside>
+
+        <main class="chat-area">
+            <div id="chatWindow" class="chat-window">
+                <div class="msg ai">SYSTEM: Title Neon Ai online. Made by Zeeshan Taluckder. How can I help?</div>
+            </div>
+
+            <div class="input-container">
+                <label for="file-upload" class="upload-btn">📎</label>
+                <input type="file" id="file-upload" hidden>
+                <input type="text" id="userInput" placeholder="Enter command...">
+                <button id="sendBtn">EXECUTE</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <h3>JOIN THE GUILD</h3>
+            <input type="email" placeholder="Gamer Email">
+            <input type="password" placeholder="Access Code">
+            <button class="modal-signup" onclick="toggleModal()">SIGN UP FREE</button>
+            <p onclick="toggleModal()" style="cursor:pointer; font-size: 12px; margin-top: 10px;">CANCEL</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
